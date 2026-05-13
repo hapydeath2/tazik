@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Products from "../products/Products";
 import Cart from "../cart/Cart";
-import Accounts from "../accounts/Accounts";
+import Accounts from "../../components/Accounts";
 import "./ShopFrontend.css";
 
 export default function ShopFrontend() {
@@ -31,7 +31,7 @@ export default function ShopFrontend() {
     }
 
     fetchProducts();
-  }, [API, FALLBACK_API]);  
+  }, [API, FALLBACK_API]);
 
   function addToCart(product) {
     const existing = cart.find((item) => item.id === product.id);
